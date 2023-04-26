@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{  
+    width: 100%;
+    display:block;
+}
+.wrapper {
+    padding: 20px;
+    height: 100vh;
+    background: linear-gradient(
+        to top,
+        #DADBD3 80%,
+        #009688 0%
+      );
+}
+.container {
+    background-color: #EAEAEA;
+    max-width: 70%;
+    border: 2px solid black;
+
+}
+.row {
+}
+.aside {
+}
+.myAccount {
+}
+.accountAvatar {
+}
+.avatarImg{}
+.iconAvatar {
+}
+
+
+.asideNotification {
+}
+.notificIcon {
+}
+
+.notificMessage {
+}
+.asideSearch {
+}
+
