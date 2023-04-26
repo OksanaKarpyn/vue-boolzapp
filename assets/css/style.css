@@ -3,9 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+[v-cloak] {
+    display: none;
+  }
 img{  
     width: 100%;
     display:block;
+}
+li{
+   list-style: none;
+}
+.acctive{
+background-color: #FBFCFC;
 }
 .wrapper {
     padding: 20px;
@@ -17,14 +26,16 @@ img{
       );
 }
 .container {
+    height: 90vh;
     background-color: #EAEAEA;
     max-width: 70%;
     border: 2px solid black;
 
 }
-.row {
-}
+
 .aside {
+    width: 40%;
+    border: 1px solid rgb(40, 87, 70);
 }
 .myAccount {
 }
@@ -36,12 +47,29 @@ img{
 
 
 .asideNotification {
+    background-color: #8EDAFC;
 }
 .notificIcon {
 }
 
 .notificMessage {
 }
+.p-Notification, .a-Notification{
+    font-size: 0.6rem;
+}
+
 .asideSearch {
+    height: 40px;
+    
+}
+.list{
+
+}
+.list-name{
+    font-size: .6rem;
+}
+/* ------------------ */
+.content{
+    width: 60%;
 }
 
