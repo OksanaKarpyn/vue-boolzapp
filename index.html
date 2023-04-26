@@ -21,7 +21,7 @@
         <div class="wrapper">
             <div class="container p-0">
                 <main class="d-flex h-100">
-                    <aside class="aside">
+                    <aside class="aside vh-90">
                         <div class="myAccount d-flex justify-content-between border-end">
                             <!-- avatar -->
                             <div class="accountAvatar w-50 d-flex align-items-center ">
@@ -107,39 +107,42 @@
                         </div>
 
                         <!---messagge -->
-                        <div class=" recive-message flex-grow-1 w-75 m-auto overflow-y-auto mt-2">
-                            <!-- ---------- -->
-                            <div class="write d-inline-block d-flex flex-column align-items-end ">
-                                <div class="write-item my-1 rounded p-1 d-flex align-items-center">
-                                    <p class="mb-0 span-size px-2">Hai portato a spasso il cane?</p>
-                                    <div class="align-self-end">
-                                        <p class="mb-0 size ps-2 ">15:30</p>
+                        <div class=" message flex-grow-1">
+                            <div class=" recive-message flex-grow-1 w-75 m-auto mt-2">
+                                <!-- ---------- -->
+                                <div class="write d-inline-block d-flex flex-column align-items-end ">
+                                    <div class="write-item my-1 rounded p-1 d-flex align-items-center">
+                                        <p class="mb-0 span-size px-2">Hai portato a spasso il cane?</p>
+                                        <div class="align-self-end">
+                                            <p class="mb-0 size ps-2 ">15:30</p>
+                                        </div>
                                     </div>
+                                    <div class="write-item my-1 rounded span-size p-1 d-flex align-items-center">
+                                        <p class="mb-0 px-2">Ricordati di stendere i panni {{valueInput}}</p>
+                                        <div class="align-self-end">
+                                            <p class="mb-0 size ps-2">15:30</p>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="write-item my-1 rounded span-size p-1 d-flex align-items-center">
+                                        <p class="mb-0 px-2"></p>
+                                        <div class="align-self-end">
+                                            <p class="mb-0 size ps-2"></p>
+                                        </div>
+                                    </div> -->
+    
                                 </div>
-                                <div class="write-item my-1 rounded span-size p-1 d-flex align-items-center">
-                                    <p class="mb-0 px-2">Ricordati di stendere i panni {{valueInput}}</p>
-                                    <div class="align-self-end">
-                                        <p class="mb-0 size ps-2">15:30</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="write-item my-1 rounded span-size p-1 d-flex align-items-center">
-                                    <p class="mb-0 px-2"></p>
-                                    <div class="align-self-end">
-                                        <p class="mb-0 size ps-2"></p>
-                                    </div>
-                                </div> -->
-
-                            </div>
-                            <!-- ---------- -->
-                            <div class="recive  d-inline-block d-flex flex-column align-items-start">
-                                <div class="recive-item my-1 rounded p-1 d-flex align-items-center d-inline-block">
-                                    <p class="mb-0 span-size px-2">Tutto fatto!</p>
-                                    <div class="align-self-end">
-                                        <p class="mb-0 size ps-2 ">15:30</p>
+                                <!-- ---------- -->
+                                <div class="recive  d-inline-block d-flex flex-column align-items-start">
+                                    <div class="recive-item my-1 rounded p-1 d-flex align-items-center d-inline-block">
+                                        <p class="mb-0 span-size px-2">Tutto fatto!</p>
+                                        <div class="align-self-end">
+                                            <p class="mb-0 size ps-2 ">15:30</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <!-- footer-write-messagge -->
                         <div class="write-messagge d-flex justify-content-between align-items-center p-2">
                             <div>

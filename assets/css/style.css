@@ -12,7 +12,7 @@ img{
 }
 li{
    list-style: none;
-   max-height: 40px;
+   /* max-height: 40px; */
 }
 .form-control{
     font-size: .6rem !important;
@@ -72,7 +72,8 @@ width: 40px;
     
 }
 .list{
-    height: 300px;
+    /* height: 300px; */
+   height: 70%;
 }
 ul{
 
@@ -91,6 +92,7 @@ ul{
 }
 /* ------------------ */
 .content{
+/* overflow: hidden; */
     width: 60%;
     background-image: url(/img/mine.jpg);
 }
@@ -110,7 +112,9 @@ ul{
     background-color:#D5F9BA ;
    /* border: 1px solid black; */
  }
+.recive-message{
 
+}
 .recive-item{
    background-color: #fff; 
 }
