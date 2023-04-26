@@ -12,7 +12,7 @@ img{
 }
 li{
    list-style: none;
-   max-height: 30px;
+   max-height: 40px;
 }
 .form-control{
     font-size: .6rem !important;
@@ -71,14 +71,14 @@ width: 40px;
 .asideSearch {
     
 }
- ul{
-/* height: calc(90vh / 500px); */
-
+.list{
+    height: 300px;
 }
-.list ul{
-    height: calc(100% /400px);
-    overflow-y: auto;
-    overflow: hidden;
+ul{
+
+    /* height: calc(100% /400px); */
+    /* overflow-y: auto; */
+    /* overflow: hidden; */
 }
 .list-name{
     font-size: .6rem;

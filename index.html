@@ -28,7 +28,7 @@
                                 <div class="avatarImg p-1">
                                     <img src="./img/avatar_io.jpg" alt="foto" class="rounded-circle">
                                 </div>
-                                    <span>Sofia</span>
+                                <span>Sofia</span>
                             </div>
                             <!-- icon-avatar -->
                             <div class="iconAvatar d-flex align-items-center">
@@ -40,50 +40,50 @@
                         <!-- notifiche -->
                         <div class="asideNotification d-flex align-items-center">
                             <div class="notificIcon p-1">
-                                <i class="fa-solid fa-bell-slash p-1 bg-white rounded-circle" style="color:  #8EDAFC;"></i>
+                                <i class="fa-solid fa-bell-slash p-1 bg-white rounded-circle"
+                                    style="color:  #8EDAFC;"></i>
                             </div>
                             <div class="notificMessage">
                                 <p class="m-0 p-0 p-Notification">Ricevi notifiche di nuovi messaggi</p>
-                                <a href="#" style="color: #b9c0be;" class="a-Notification m-0">Attiva notifiche desktop</a>
+                                <a href="#" style="color: #b9c0be;" class="a-Notification m-0">Attiva notifiche
+                                    desktop</a>
                             </div>
                         </div>
                         <!-- cerca -->
                         <div class="asideSearch p-1">
                             <div class="input-group">
-                                
+
                                 <div class="form-control p-0 d-flex align-items-center ">
-                                    <label for="float1" class="form-label input-group-text d-inline border-0  bg-white m-0">
-                                        <i class="fa-solid fa-magnifying-glass"
-                                        style="color: #b9c0be;"></i>
+                                    <label for="float1"
+                                        class="form-label input-group-text d-inline border-0  bg-white m-0">
+                                        <i class="fa-solid fa-magnifying-glass" style="color: #b9c0be;"></i>
                                     </label>
                                     <input type="text" class="form-control border-0 m-0" id="float1"
                                         placeholder="Cerca o inizia una nuova chat ">
-                                  
+
                                 </div>
                             </div>
                         </div>
                         <div class="list overflow-y-auto">
                             <ul class="p-0">
-                                <li
-                                v-for="(item, index) in contacts" 
-                                :key="index"
-                                 class=" d-flex align-items-center justify-content-between my-1   border-bottom">
-                                 <div class="d-flex align-items-center">
-                                    <div class="avatarImg  p-1">
-                                        <img :src="item.avatar" alt="" class=" avatarImg rounded-circle p-2 ">
-                                    </div>
-                                       <div class="list-name mt-3">
+                                <li v-for="(item, index) in contacts" :key="index"
+                                    class=" d-flex align-items-center justify-content-between my-1   border-bottom">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatarImg  p-1">
+                                            <img :src="item.avatar" alt="" class=" avatarImg rounded-circle p-2 ">
+                                        </div>
+                                        <div class="list-name mt-3">
                                             <strong>{{item.name}}</strong>
-                                           <p class="">Ultimo messaggio inviato</p>
-                                       </div>
-                                 </div>
-                                 
+                                            <p class="">Ultimo messaggio inviato</p>
+                                        </div>
+                                    </div>
+
                                     <div class="span-size mx-2"><span>12:00</span></div>
                                 </li>
-                               
+
                             </ul>
                         </div>
-                        
+
                     </aside>
                     <div class="content d-flex flex-column">
                         <!-- content-avatar -->
@@ -117,7 +117,7 @@
                                     </div>
                                 </div>
                                 <div class="write-item my-1 rounded span-size p-1 d-flex align-items-center">
-                                    <p class="mb-0 px-2">Ricordati di stendere i panni</p>
+                                    <p class="mb-0 px-2">Ricordati di stendere i panni {{valueInput}}</p>
                                     <div class="align-self-end">
                                         <p class="mb-0 size ps-2">15:30</p>
                                     </div>
@@ -143,14 +143,16 @@
                         <!-- footer-write-messagge -->
                         <div class="write-messagge d-flex justify-content-between align-items-center p-2">
                             <div>
-                                <i class="fa-regular fa-face-smile p-2"  style="color: #b9c0be;"></i>
+                                <i class="fa-regular fa-face-smile p-2" style="color: #b9c0be;"></i>
                             </div>
                             <div class="flex-grow-1 ">
-                                <input type="text" class="form-control p-1" id="messageInput" placeholder="scrivi un messaggio">
-                              </div>
-                              <div>
+                                <input type="text" class="form-control p-1" id="messageInput"
+                                    placeholder="scrivi un messaggio " v-modal="valueInput" @keydown.enter="addMess">
+                                    <button @click="addMess()">click</button>
+                            </div>
+                            <div>
                                 <i class="fa-solid fa-microphone p-2" style="color: #b9c0be;"></i>
-                              </div>
+                            </div>
                         </div>
 
                     </div>

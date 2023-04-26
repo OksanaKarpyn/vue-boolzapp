@@ -3,6 +3,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        valueInput:'',
+        newMessage:[],
         //  indice:'active',
         contacts: [
           {
@@ -171,7 +173,15 @@ const { createApp } = Vue
      
       }
     },
+    
     methods:{
-      
+      addMess(){
+          this.newMessage.push(this.valueInput)
+        if(this.valueInput !== ''){
+    
+            // this.valueInput=''
+        }
+        console.log(this.valueInput)
+      }
     }
   }).mount('#app')
