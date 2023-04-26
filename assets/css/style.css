@@ -12,7 +12,11 @@ img{
 }
 li{
    list-style: none;
-   max-height: 35px;
+   max-height: 30px;
+}
+.form-control{
+    font-size: .6rem !important;
+    padding: 0 !important;
 }
 .active{
 background-color: #FBFCFC;
@@ -30,13 +34,14 @@ background-color: #FBFCFC;
     height: 90vh;
     background-color: #EAEAEA;
     /* max-width: 90%; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
 
 }
 
 .aside {
     width: 40%;
-    border: 1px solid rgb(40, 87, 70);
+    /* border: 1px solid rgb(40, 87, 70); */
+    background-color: #efecea;
 }
 .myAccount {
 }
@@ -58,7 +63,7 @@ width: 40px;
 
 .notificMessage {
 }
-.p-Notification, .a-Notification,.p-avatar{
+ .p-Notification, .a-Notification,.p-avatar{
     font-size: 0.6rem;
     padding: 0;
 }
@@ -81,6 +86,9 @@ width: 40px;
 .span-size{
     font-size: .6rem;
 }
+.size{
+    font-size: .4rem;
+}
 /* ------------------ */
 .content{
     width: 60%;
@@ -94,3 +102,16 @@ width: 40px;
 
 }
 .avatarItem{}
+ /* ------------content-recive */
+ .write{
+
+ }
+ .write-item{
+    background-color:#D5F9BA ;
+   /* border: 1px solid black; */
+ }
+
+.recive-item{
+   background-color: #fff; 
+}
+ /* ----------------content-write.mess */
