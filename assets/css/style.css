@@ -12,7 +12,7 @@ img{
 }
 li{
    list-style: none;
-   max-height: 40px;
+   max-height: 35px;
 }
 .active{
 background-color: #FBFCFC;
@@ -29,7 +29,7 @@ background-color: #FBFCFC;
 .container {
     height: 90vh;
     background-color: #EAEAEA;
-    max-width: 90%;
+    /* max-width: 90%; */
     border: 2px solid black;
 
 }
@@ -43,7 +43,7 @@ background-color: #FBFCFC;
 .accountAvatar {
 }
 .avatarImg img{
-width: 50px;
+width: 40px;
 }
 .iconAvatar {
 }
@@ -58,21 +58,27 @@ width: 50px;
 
 .notificMessage {
 }
-.p-Notification, .a-Notification{
+.p-Notification, .a-Notification,.p-avatar{
     font-size: 0.6rem;
+    padding: 0;
 }
 
 .asideSearch {
     
 }
  ul{
-height: calc(90vh / 2);
+/* height: calc(90vh / 500px); */
 
 }
-.list{
+.list ul{
+    height: calc(100% /400px);
     overflow-y: auto;
+    overflow: hidden;
 }
 .list-name{
+    font-size: .6rem;
+}
+.span-size{
     font-size: .6rem;
 }
 /* ------------------ */
@@ -81,7 +87,7 @@ height: calc(90vh / 2);
     background-image: url(/img/mine.jpg);
 }
 
-.contentAvatar{
+.contentAvatar, .write-messagge{
     background-color: #efecea;
 }
 .contentIconAvatar{

@@ -32,7 +32,7 @@
                             </div>
                             <!-- icon-avatar -->
                             <div class="iconAvatar d-flex align-items-center">
-                                <i class="fa-solid fa-circle-notch ms-2 p-1" style="color: #b9c0be;"></i>
+                                <i class="fa-solid fa-circle-notch ms-1 p-1" style="color: #b9c0be;"></i>
                                 <i class="fa-solid fa-message ms-2" style="color: #b9c0be;"></i>
                                 <i class="fa-solid fa-ellipsis-vertical ms-1 p-2" style="color: #b9c0be;"></i>
                             </div>
@@ -40,9 +40,9 @@
                         <!-- notifiche -->
                         <div class="asideNotification d-flex align-items-center">
                             <div class="notificIcon p-1">
-                                <i class="fa-solid fa-bell-slash p-2 bg-white rounded-circle" style="color:  #8EDAFC;"></i>
+                                <i class="fa-solid fa-bell-slash p-1 bg-white rounded-circle" style="color:  #8EDAFC;"></i>
                             </div>
-                            <div class="notificMessage p-2">
+                            <div class="notificMessage">
                                 <p class="m-0 p-0 p-Notification">Ricevi notifiche di nuovi messaggi</p>
                                 <a href="#" style="color: #b9c0be;" class="a-Notification m-0">Attiva notifiche desktop</a>
                             </div>
@@ -51,7 +51,7 @@
                         <div class="asideSearch p-1">
                             <div class="input-group">
                                 
-                                <div class="form-control d-flex align-items-center ">
+                                <div class="form-control p-0 d-flex align-items-center ">
                                     <label for="float1" class="form-label input-group-text d-inline border-0  bg-white m-0">
                                         <i class="fa-solid fa-magnifying-glass"
                                         style="color: #b9c0be;"></i>
@@ -67,35 +67,58 @@
                                 <li
                                 v-for="(item, index) in contacts" 
                                 :key="index"
-                                 class=" d-flex align-items-center my-1  border border-dark">
-                                 <div class="avatarImg  p-1">
-                                     <img :src="item.avatar" alt="" class=" avatarImg rounded-circle p-2 ">
-                                 </div>
-                                    <div class="list-name mt-3">
-                                        {{item.name}}
-                                        <p class="">ultimo messaggio inviato</p>
+                                 class=" d-flex align-items-center justify-content-between my-1  border border-dark">
+                                 <div class="d-flex align-items-center">
+                                    <div class="avatarImg  p-1">
+                                        <img :src="item.avatar" alt="" class=" avatarImg rounded-circle p-2 ">
                                     </div>
+                                       <div class="list-name mt-3">
+                                            <strong>{{item.name}}</strong>
+                                           <p class="">Ultimo messaggio inviato</p>
+                                       </div>
+                                 </div>
+                                 
+                                    <div class="span-size mx-2"><span>12:00</span></div>
                                 </li>
                                
                             </ul>
                         </div>
                         
                     </aside>
-                    <div class="content">
+                    <div class="content d-flex flex-column">
+                        <!-- content-avatar -->
                         <div class="contentAvatar d-flex justify-content-between">
-                            <!-- avatar -->
-                            <div class="avatarItem w-50 d-flex align-items-center">
+                            <!-- avatar-content -->
+                            <div class="avatarItem d-flex align-items-center">
                                 <div class="avatarImg p-1">
-                                    <img src="./img/avatar_io.jpg" alt="foto" class="rounded-circle">
+                                    <img src="./img/avatar_1.jpg" alt="foto" class="rounded-circle">
                                 </div>
-                                <span>Sofia</span>
+                                <div>
+                                    <span>Michele</span>
+                                    <p class="p-avatar m-0">Ultimo accesso oggi alle 12:00</p>
+                                </div>
                             </div>
-                            <!-- icon-avatar -->
+                            <!-- icon-avatar-content -->
                             <div class="contentIconAvatar d-flex align-items-center">
                                 <i class="fa-solid fa-magnifying-glass" style="color: #b9c0be;"></i>
-                                <i class="fa-solid fa-message ms-2" style="color: #b9c0be;"></i>
+                                <i class="fa-solid fa-paperclip ms-1 p-2" style="color: #b9c0be;"></i>
                                 <i class="fa-solid fa-ellipsis-vertical ms-1 p-2" style="color: #b9c0be;"></i>
                             </div>
+                        </div>
+
+                        <!-- recive-messagge -->
+                        <div class="flex-grow-1 w-75 border border-danger m-auto">irtem</div>
+                        <!-- write-messagge -->
+                        <div class="write-messagge d-flex justify-content-between align-items-center p-2">
+                            <div>
+                                <i class="fa-regular fa-face-smile p-2"  style="color: #b9c0be;"></i>
+                            </div>
+                            <div class="flex-grow-1 ">
+                                <input type="text" class="form-control p-1" id="messageInput" placeholder="scrivi un messaggio">
+                              </div>
+                              <div>
+                                <i class="fa-solid fa-microphone p-2" style="color: #b9c0be;"></i>
+                              </div>
                         </div>
 
                     </div>
