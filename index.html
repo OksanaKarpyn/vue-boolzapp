@@ -19,16 +19,16 @@
 <body>
     <div id="app" class="v-cloak">
         <div class="wrapper">
-            <div class="container">
-                <main class="row-1 d-flex h-100">
-                    <aside class="aside p-1">
-                        <div class="myAccount d-flex justify-content-between">
+            <div class="container p-0">
+                <main class="d-flex h-100">
+                    <aside class="aside">
+                        <div class="myAccount d-flex justify-content-between border border-danger">
                             <!-- avatar -->
                             <div class="accountAvatar w-50 d-flex align-items-center">
-                                <div class="avatarImg w-25 p-1">
+                                <div class="avatarImg p-1">
                                     <img src="./img/avatar_io.jpg" alt="foto" class="rounded-circle">
                                 </div>
-                                <span>Sofia</span>
+                                    <span>Sofia</span>
                             </div>
                             <!-- icon-avatar -->
                             <div class="iconAvatar d-flex align-items-center">
@@ -62,14 +62,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="list">
-                            <ul class=" mt-4 p-0 h-100 overflow-hidden overflow-scroll">
+                        <div class="list overflow-y-auto">
+                            <ul class="p-0">
                                 <li
                                 v-for="(item, index) in contacts" 
                                 :key="index"
                                  class=" d-flex align-items-center my-1  border border-dark">
-                                    <img :src="item.avatar" alt="" class="rounded-circle w-25 p-2">
-                                    <div class="list-name">
+                                 <div class="avatarImg  p-1">
+                                     <img :src="item.avatar" alt="" class=" avatarImg rounded-circle p-2 ">
+                                 </div>
+                                    <div class="list-name mt-3">
                                         {{item.name}}
                                         <p class="">ultimo messaggio inviato</p>
                                     </div>
@@ -80,6 +82,21 @@
                         
                     </aside>
                     <div class="content">
+                        <div class="contentAvatar d-flex justify-content-between">
+                            <!-- avatar -->
+                            <div class="avatarItem w-50 d-flex align-items-center">
+                                <div class="avatarImg p-1">
+                                    <img src="./img/avatar_io.jpg" alt="foto" class="rounded-circle">
+                                </div>
+                                <span>Sofia</span>
+                            </div>
+                            <!-- icon-avatar -->
+                            <div class="contentIconAvatar d-flex align-items-center">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #b9c0be;"></i>
+                                <i class="fa-solid fa-message ms-2" style="color: #b9c0be;"></i>
+                                <i class="fa-solid fa-ellipsis-vertical ms-1 p-2" style="color: #b9c0be;"></i>
+                            </div>
+                        </div>
 
                     </div>
                 </main>

@@ -12,8 +12,9 @@ img{
 }
 li{
    list-style: none;
+   max-height: 40px;
 }
-.acctive{
+.active{
 background-color: #FBFCFC;
 }
 .wrapper {
@@ -21,14 +22,14 @@ background-color: #FBFCFC;
     height: 100vh;
     background: linear-gradient(
         to top,
-        #DADBD3 80%,
+        #DADBD3 90%,
         #009688 0%
       );
 }
 .container {
     height: 90vh;
     background-color: #EAEAEA;
-    max-width: 70%;
+    max-width: 90%;
     border: 2px solid black;
 
 }
@@ -41,13 +42,16 @@ background-color: #FBFCFC;
 }
 .accountAvatar {
 }
-.avatarImg{}
+.avatarImg img{
+width: 50px;
+}
 .iconAvatar {
 }
 
 
 .asideNotification {
     background-color: #8EDAFC;
+    /* height: 40px; */
 }
 .notificIcon {
 }
@@ -59,11 +63,14 @@ background-color: #FBFCFC;
 }
 
 .asideSearch {
-    height: 40px;
     
 }
-.list{
+ ul{
+height: calc(90vh / 2);
 
+}
+.list{
+    overflow-y: auto;
 }
 .list-name{
     font-size: .6rem;
@@ -71,5 +78,13 @@ background-color: #FBFCFC;
 /* ------------------ */
 .content{
     width: 60%;
+    background-image: url(/img/mine.jpg);
 }
 
+.contentAvatar{
+    background-color: #efecea;
+}
+.contentIconAvatar{
+
+}
+.avatarItem{}
