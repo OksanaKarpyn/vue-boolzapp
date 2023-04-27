@@ -114,6 +114,7 @@
                                 class="mb-3">
                                 <div class="d-flex align-items-center">
                                     <p class="messagge p-1 mb-0 px-2">{{ elem.message }}</p>
+                                    <!-- <p>{{valueInput}}</p> -->
                                     <span class="d-block px-1 message-span align-self-end">{{elem.date}}</span>
                                 </div>
                             </div>
@@ -126,8 +127,8 @@
                             </div>
                             <div class="flex-grow-1 ">
                                 <input type="text" class="form-control p-1" id="messageInput"
-                                    placeholder="scrivi un messaggio " v-modal="valueInput" @keydown.enter="addMess">
-                                    <button @click="addMess()">click</button>
+                                    placeholder="scrivi un messaggio " v-model="valueInput" @keydown.enter="addMess">
+                                    <button @click="addMess">click</button>
                             </div>
                             <div>
                                 <i class="fa-solid fa-microphone p-2" style="color: #b9c0be;"></i>
