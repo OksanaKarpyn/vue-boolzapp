@@ -169,26 +169,23 @@ createApp({
 
     methods: {
         addMess() {
-            //if (this.valueInput !== '') {
+            if (this.valueInput !== '') {
                 this.contacts[this.currentIndex].messages.push({
                     message: this.valueInput,
                     status: 'sent'
                 })
 
                this.valueInput = ''
-            //}
-            console.log(this.contacts[this.currentIndex].messages)
+               setTimeout(this.sendmessage,1500)
+            }
+            // console.log(this.contacts[this.currentIndex].messages)
         },
-        
-        settimeout(){
-            let timeout = setTimeout((){
-                this.contacts[this.currentIndex].messages.push({
-                    message: this.risposta,
-                    status: 'recevied'
-                })
 
+        sendmessage(){
+            this.contacts[this.currentIndex].messages.push({
+                    message: this.answer,
+                    status: 'recevied'
             })
-            
         },
 
         changeItem(i) {
