@@ -18,7 +18,7 @@
 
 <body>
     <div id="app" class="v-cloak">
-        <div class="wrapper">
+        <div class="wrapper d-flex">
             <div class="container p-0">
                 <main class="d-flex h-100">
                     <aside class="aside vh-90">
@@ -44,7 +44,7 @@
                                     style="color:  #8EDAFC;"></i>
                             </div>
                             <div class="notificMessage">
-                                <p class="m-0 p-0 p-Notification">Ricevi notifiche di nuovi messaggi</p>
+                                <p class="mb-0 p-0 p-Notification">Ricevi notifiche di nuovi messaggi</p>
                                 <a href="#" style="color: #b9c0be;" class="a-Notification m-0">Attiva notifiche
                                     desktop</a>
                             </div>
@@ -64,10 +64,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="list overflow-y-auto">
+                        <div class="list overflow-y-auto d-flex flex-column">
                             <ul class="p-0">
                                 <li v-for="(item, index) in contacts" :key="index"
-                                    class=" d-flex align-items-center justify-content-between my-1   border-bottom">
+                                    class=" d-flex align-items-center justify-content-between my-1  border-bottom list-hover"
+                                    @click="changeItem(index)">
                                     <div class="d-flex align-items-center">
                                         <div class="avatarImg  p-1">
                                             <img :src="item.avatar" alt="" class=" avatarImg rounded-circle p-2 ">
@@ -91,10 +92,10 @@
                             <!-- avatar-content -->
                             <div class="avatarItem d-flex align-items-center">
                                 <div class="avatarImg p-1">
-                                    <img src="./img/avatar_1.jpg" alt="foto" class="rounded-circle">
+                                    <img :src="contacts[currentIndex].avatar" alt="foto" class="rounded-circle">
                                 </div>
                                 <div>
-                                    <span>Michele</span>
+                                    <span>{{contacts[currentIndex].name}}</span>
                                     <p class="p-avatar m-0">Ultimo accesso oggi alle 12:00</p>
                                 </div>
                             </div>
@@ -107,38 +108,13 @@
                         </div>
 
                         <!---messagge -->
-                        <div class=" message flex-grow-1">
-                            <div class=" recive-message flex-grow-1 w-75 m-auto mt-2">
-                                <!-- ---------- -->
-                                <div class="write d-inline-block d-flex flex-column align-items-end ">
-                                    <div class="write-item my-1 rounded p-1 d-flex align-items-center">
-                                        <p class="mb-0 span-size px-2">Hai portato a spasso il cane?</p>
-                                        <div class="align-self-end">
-                                            <p class="mb-0 size ps-2 ">15:30</p>
-                                        </div>
-                                    </div>
-                                    <div class="write-item my-1 rounded span-size p-1 d-flex align-items-center">
-                                        <p class="mb-0 px-2">Ricordati di stendere i panni {{valueInput}}</p>
-                                        <div class="align-self-end">
-                                            <p class="mb-0 size ps-2">15:30</p>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="write-item my-1 rounded span-size p-1 d-flex align-items-center">
-                                        <p class="mb-0 px-2"></p>
-                                        <div class="align-self-end">
-                                            <p class="mb-0 size ps-2"></p>
-                                        </div>
-                                    </div> -->
-    
-                                </div>
-                                <!-- ---------- -->
-                                <div class="recive  d-inline-block d-flex flex-column align-items-start">
-                                    <div class="recive-item my-1 rounded p-1 d-flex align-items-center d-inline-block">
-                                        <p class="mb-0 span-size px-2">Tutto fatto!</p>
-                                        <div class="align-self-end">
-                                            <p class="mb-0 size ps-2 ">15:30</p>
-                                        </div>
-                                    </div>
+                        <div class=" message flex-grow-1 d-flex flex-column p-3">
+                            <div v-for=" (elem,index) in contacts[currentIndex].messages"
+                                :class="elem.status == 'sent' ? 'align-self-end write-item rounded' : 'align-self-start bg-white rounded' "
+                                class="mb-3">
+                                <div class="d-flex align-items-center">
+                                    <p class="messagge p-1 mb-0 px-2">{{ elem.message }}</p>
+                                    <span class="d-block px-1 message-span align-self-end">{{elem.date}}</span>
                                 </div>
                             </div>
                         </div>

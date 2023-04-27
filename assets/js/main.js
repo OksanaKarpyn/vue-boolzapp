@@ -5,7 +5,7 @@ const { createApp } = Vue
       return {
         valueInput:'',
         newMessage:[],
-        //  indice:'active',
+        currentIndex:0,
         contacts: [
           {
               name: 'Michele',
@@ -182,6 +182,9 @@ const { createApp } = Vue
             // this.valueInput=''
         }
         console.log(this.valueInput)
+      },
+      changeItem(i){
+        this.currentIndex = i;
       }
     }
   }).mount('#app')
