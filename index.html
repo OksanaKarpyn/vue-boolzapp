@@ -59,17 +59,17 @@
                                         <i class="fa-solid fa-magnifying-glass" style="color: #b9c0be;"></i>
                                     </label>
                                     <input type="text" class="form-control border-0 m-0" id="float1"
-                                        placeholder="Cerca o inizia una nuova chat ">
-
+                                        placeholder="Cerca o inizia una nuova chat" v-model="searchValue" @keyup="filterName">
                                 </div>
                             </div>
                         </div>
+                        <!-- lista -->
                         <div class="list overflow-y-auto d-flex flex-column">
                             <ul class="p-0">
                                 <li v-for="(item, index) in contacts" :key="index"
-                                    class=" d-flex align-items-center justify-content-between my-1  border-bottom list-hover"
-                                    @click="changeItem(index)">
-                                    <div class="d-flex align-items-center">
+                                    class=" d-flex align-items-center justify-content-between my-1 list-hover"
+                                    @click="changeItem(index)" >
+                                    <div class="d-flex align-items-center" v-if="item.visible" >
                                         <div class="avatarImg  p-1">
                                             <img :src="item.avatar" alt="" class=" avatarImg rounded-circle p-2 ">
                                         </div>
@@ -79,7 +79,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="span-size mx-2"><span>12:00</span></div>
+                                    <div class="span-size mx-2"><span></span></div>
                                 </li>
 
                             </ul>
@@ -108,7 +108,7 @@
                         </div>
 
                         <!---messagge -->
-                        <div class=" message flex-grow-1 d-flex flex-column p-3">
+                        <div class=" message flex-grow-1 d-flex flex-column p-3 overflow-y-auto">
                             <div v-for=" (elem,index) in contacts[currentIndex].messages"
                                 :class="elem.status == 'sent' ? 'align-self-end write-item rounded' : 'align-self-start bg-white rounded' "
                                 class="mb-3">
@@ -128,7 +128,6 @@
                             <div class="flex-grow-1 ">
                                 <input type="text" class="form-control p-1" id="messageInput"
                                     placeholder="scrivi un messaggio " v-model="valueInput" @keydown.enter="addMess">
-                                    <button @click="addMess" @click="sendmessage">click</button>
                             </div>
                             <div>
                                 <i class="fa-solid fa-microphone p-2" style="color: #b9c0be;"></i>

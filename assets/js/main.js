@@ -7,7 +7,9 @@ createApp({
         return {
             valueInput: '',
             currentIndex: 0,
-            answer:'ok',
+            answer: 'ok',
+            searchValue: '',
+            nomeTrovato:'',
             contacts: [{
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
@@ -162,11 +164,13 @@ createApp({
                     ],
                 }
             ]
-
-
         }
     },
-
+    methods(){
+    },
+computed:{
+ 
+},
     methods: {
         addMess() {
             if (this.valueInput !== '') {
@@ -175,19 +179,45 @@ createApp({
                     status: 'sent'
                 })
 
-               this.valueInput = ''
-               setTimeout(this.sendmessage,1500)
+                this.valueInput = ''
+                setTimeout(this.sendmessage, 1500)
             }
             // console.log(this.contacts[this.currentIndex].messages)
         },
 
-        sendmessage(){
+        sendmessage() {
             this.contacts[this.currentIndex].messages.push({
-                    message: this.answer,
-                    status: 'recevied'
+                message: this.answer,
+                status: 'recevied'
             })
         },
 
+        filterName(){
+            
+            // let mostra = [true,true,true];
+            // mostra[indiceElemento]
+            // for (let i = 0; i < this.contacts.length ; i++) {
+            //     if(element.name.includes(this.searchValue)){
+            //         this.mostra[i] = true;
+            //         console.log("true:" + element.name)
+            //     }else{
+            //         element.visible = false;
+            //         console.log("false:" + element.name)
+    
+            //     }
+            // }
+         
+          this.contacts.forEach((element) => {
+            if(element.name.toLowerCase().includes(this.searchValue.toLowerCase())){
+                element.visible = true;
+                console.log("true:" + element.name)
+            }else{
+                element.visible = false;
+                console.log("false:" + element.name)
+
+            }
+          });
+        },
         changeItem(i) {
             this.currentIndex = i;
         }
